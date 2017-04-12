@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import container from '../containers/all.js'
+import GameComponent from './game_component'
 
 const AppRoot = React.createClass({
   render: function () {
     return (
       <section>
-        <h1>Whoa!</h1>
+        <GameComponent />
       </section>
     );
   }

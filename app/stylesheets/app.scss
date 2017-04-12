@@ -11,6 +11,36 @@ html {
     body {
         margin: 0;
         padding: 0;
-        background: #CACACA;
+        background: green;
     }
+}
+
+header{
+  text-align: center;
+  button{
+    background: red;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    margin: 2rem;
+  }
+}
+
+table {
+  font-size: 4rem;
+  margin: 1rem auto;
+  border: .1rem solid black;
+  background: black;
+  th {
+    border: .1rem solid black;
+    background: blue;
+    color: white;
+  }
+
+  td {
+    border: .1rem solid black;
+    background: blue;
+    color: gold;
+
+  }
 }
