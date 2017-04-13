@@ -27,10 +27,19 @@ header{
 }
 
 table {
+  display: flex;
+  justify-content: center;
+  // max-width: 75vw;
+  
+  tbody, tr {
+    display: flex;
+    flex-direction: column;
+
+  }
   font-size: 4rem;
   margin: 1rem auto;
-  border: .1rem solid black;
-  background: black;
+  // border: .1rem solid black;
+  background: green;
   th {
     border: .1rem solid black;
     background: blue;
