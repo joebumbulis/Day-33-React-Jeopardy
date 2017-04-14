@@ -3,7 +3,7 @@
 const initialState = {
   username: " ",
   categories: []
-  view: loginView;
+  // view: loginView;
 }
 
 export default function AppReducer (state, action) {

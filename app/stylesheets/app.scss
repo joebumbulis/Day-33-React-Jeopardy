@@ -11,7 +11,8 @@ html {
     body {
         margin: 0;
         padding: 0;
-        background: green;
+        background: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     }
 }
 
@@ -30,7 +31,7 @@ table {
   display: flex;
   justify-content: center;
   // max-width: 75vw;
-  
+
   tbody, tr {
     display: flex;
     flex-direction: column;
@@ -39,7 +40,7 @@ table {
   font-size: 4rem;
   margin: 1rem auto;
   // border: .1rem solid black;
-  background: green;
+  background: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   th {
     border: .1rem solid black;
     background: blue;
