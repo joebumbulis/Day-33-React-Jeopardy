@@ -3,6 +3,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import AppRoot from './components/app_root.js'
+import AppReducer from './reducers/app_reducer.js'
 
 export default function app() {
   render(
@@ -12,3 +13,8 @@ export default function app() {
     document.getElementById('app')
   )
 }
+
+
+    store.dispatch({
+        type: "TESTING",
+    });

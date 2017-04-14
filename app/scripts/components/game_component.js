@@ -1,5 +1,7 @@
 import React from 'react'
 import GameBoard from './game_board.js'
+import { connect } from 'react-redux'
+import containers from '../containers/all.js'
 
 class GameComponent extends React.Component {
   constructor(props){
@@ -19,4 +21,4 @@ class GameComponent extends React.Component {
             </div>
           };
 };
-export default GameComponent;
+export default connect(containers.allstate)(GameComponent);
