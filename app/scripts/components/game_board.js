@@ -20,7 +20,7 @@ class GameBoard extends React.Component{
                       return (
                         <tbody key={i}>
                           <tr><th>{item.category}</th></tr>
-                          <Question questions={this.props.value}/>
+                          <Question question={this.props.value}/>
 
                         </tbody>
                         )

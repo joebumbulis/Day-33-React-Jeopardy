@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import container from '../containers/all.js'
 import GameComponent from './game_component'
 
+
 const AppRoot = React.createClass({
   render: function () {
     return (

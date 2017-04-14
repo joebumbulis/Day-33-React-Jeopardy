@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 class Question extends React.Component{
   constructor(props){
     super(props)
@@ -8,8 +9,8 @@ class Question extends React.Component{
 render(){
   return (
   <tr>
-    {this.props.value.map((item, j)=>{
-      return (<td key={j}>{item.value}</td>)
+    {this.props.question.map((question, j)=>{
+      return (<td key={j}>{question.value}</td>)
     })}
   </tr>
   )
