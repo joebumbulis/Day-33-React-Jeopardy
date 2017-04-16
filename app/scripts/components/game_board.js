@@ -13,11 +13,11 @@ class GameBoard extends React.Component{
               <table>
                     {this.props.value.map((item, i) => {
                       return (
-                        <tbody key={i}>
+                        <thead key={i}>
                           <tr><th>{item.category}</th></tr>
                           <Question question={this.props.value}/>
+                        </thead>
 
-                        </tbody>
                         )
                     })}
 

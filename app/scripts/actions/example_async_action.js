@@ -1,20 +1,26 @@
-export default function exampleAsyncAction () {
-  //All async action creators should return a function that takes 'dispatch' as its argument
-  return function (dispatch) {
-    //Before ajax call dispatch any needed actions
-    dispatch( { type: "STARTING_EXAMPLE_ASYNC" });
+import api from '../api.js'
+import { connect } from 'react-redux'
+import container from '../containers/all.js'
 
-    //Do the ajax call
-    return  $.ajax({
-      url: "SOME_URL",
-      headers: {
-        "SOME_ID": "BLAH"
-      }
-      data: {
-      }
-    }).then(function (response) {
-      //After the ajax call dispatch any needed actions
-      dispatch( { type: "ENDING_EXAMPLE_ASYNC" });
+
+export default function categories(name){
+
+  return (dispatch) => {
+    dispatch({type:"START", name: name })
+    return $.getJSON(
+      api.url + '/categories/?count=6'
+    ).then((data, success, xhr) =>{
+      console.log("Starting Second AJAX")
+      data.forEach((current, i, arr) => {
+        $.getJSON(
+          api.url + '/category/?id=' + current.id
+        ).then((data) => {
+          console.log("Dispatching load data")
+          dispatch({
+            type:"LOAD_DATA",
+            data: data})
+        })
+      })
     })
   }
 }

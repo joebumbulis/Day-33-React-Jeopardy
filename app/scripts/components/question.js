@@ -4,50 +4,43 @@ import React from 'react'
 class Question extends React.Component{
   constructor(props){
     super(props)
+    this.setState({
+      clicked: false,
+      prompt: false
+    })
 
 this.renderAction = this.renderAction.bind(this);
   }
 
-  renderAction(){
-    if (this.state.clicked === true){
-      return (<span>
-                <td></td>
-              </span)
-    } else {
+renderAction() {
+  console.log("hi");
+  this.setState({
+    prompt: true
+  })
 
-    }
   }
-
-  if (this.state.checked === true){
-        return (<span>
-                  <h5>Read</h5>
-                  <input type="checkbox" disabled checked="true" />
-                </span>);
-      } else {
-        return (<span>
-                  <h5>Mark as Read</h5>
-                  <input type="checkbox" onClick={this.handleChecked} checked={this.state.prompt}/>
-                </span>);
-      }
-    },
-
-    render: function(){
-      var divClass = ""
-      if (this.state.prompt) {
-        divClass = "prompt"
-      } else {
-        divClass = "hidden"
-      }
 
 
 render(){
-  return (
-  <tr>
-    {this.props.question.map((question, j)=>{
-      return (<td onClick={this.renderAction} key={j}>{question.value}</td>)
-    })}
-  </tr>
-  )
+  var divClass = ""
+    if (this.prompt) {
+      divClass = "prompt"
+    } else {
+      divClass = "hidden"
+    }
+
+  return (<span>
+    <tr>
+      {this.props.question.map((question, j)=>{
+        return (<td onClick={this.renderAction} key={j}>{question.value}</td>)
+      })}
+    </tr>
+  <div className="{divClass}">
+    <h5>
+    What is the question
+    </h5>
+  </div>
+  </span>)
   }
 
 };
