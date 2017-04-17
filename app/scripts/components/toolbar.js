@@ -10,6 +10,7 @@ this.clickReset = this.clickReset.bind(this);
 
 clickStart (){
   console.log("Start clicked");
+  // store.dispath(categories(this.refs.name.value))
 }
 clickReset(){
   console.log("Reset Clicked");
